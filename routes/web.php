@@ -32,4 +32,4 @@ Route::get('/dashboard', 'AdminController@dashboard')->name('admin.dashboard');
 Route::get('logout', 'LoginController@logout')->name('logout');
 Route::post('/upload-file', 'AdminController@fileUpload')->name('fileUpload');
 Route::get('/clientlist', 'AdminController@clientlist')->name('clientlist');
-Route::get('/clientedit/{id}', 'AdminController@clientedit')->name('clientedit');
+Route::get('/clientedit', 'AdminController@clientedit')->name('clientedit');
