@@ -1,0 +1,804 @@
+/* BASE - Base styles, variables, mixins, ect */
+/* Font Colors */
+/* Background Colors */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 18, ../scss/base/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, ../scss/base/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, ../scss/base/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, ../scss/base/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, ../scss/base/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 41, ../scss/base/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, ../scss/base/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, ../scss/base/_base.scss */
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #545151;
+  min-width: 320px;
+  font-weight: 400;
+  position: relative;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialised;
+  background: #fff;
+}
+
+/* line 14, ../scss/base/_base.scss */
+a {
+  color: #ff1c25;
+}
+
+/* line 18, ../scss/base/_base.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 22, ../scss/base/_base.scss */
+textarea:focus, input:focus, a:focus {
+  outline: 0;
+}
+
+/* line 26, ../scss/base/_base.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 31, ../scss/base/_base.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 35, ../scss/base/_base.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* LAYOUTS - Page layout styles */
+/** PARALLAX **/
+/* line 4, ../scss/layouts/_header.scss */
+.mainheader {
+  position: relative;
+}
+
+/* line 8, ../scss/layouts/_header.scss */
+.mainheader:before {
+  top: 0;
+  left: 0;
+  content: " ";
+  background-image: url(../images/arnament.png);
+  position: absolute;
+  height: 16px;
+  width: 100%;
+}
+
+/* line 18, ../scss/layouts/_header.scss */
+.mainheader:after {
+  bottom: 0;
+  left: 0;
+  content: " ";
+  background-image: url(../images/arnament.png);
+  position: absolute;
+  height: 16px;
+  width: 100%;
+}
+
+/* line 28, ../scss/layouts/_header.scss */
+.height320 {
+  height: 220px;
+}
+
+/* line 32, ../scss/layouts/_header.scss */
+.height600 {
+  height: 600px;
+}
+
+/* line 36, ../scss/layouts/_header.scss */
+.height300 {
+  height: 300px;
+}
+
+/* line 41, ../scss/layouts/_header.scss */
+.my-parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px 0;
+  position: relative;
+}
+
+/* line 51, ../scss/layouts/_header.scss */
+.my-parallax-overlay {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* line 61, ../scss/layouts/_header.scss */
+.center-middle {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* line 66, ../scss/layouts/_header.scss */
+.alignment {
+  position: absolute;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 73, ../scss/layouts/_header.scss */
+.center-middle {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* line 78, ../scss/layouts/_header.scss */
+.center-middle h2 {
+  margin-top: 140px;
+}
+
+/* line 82, ../scss/layouts/_header.scss */
+.v-align {
+  display: table-cell;
+}
+
+/* line 87, ../scss/layouts/_header.scss */
+p.main-title {
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin-top: 30px;
+  line-height: 1.4;
+}
+
+/* line 96, ../scss/layouts/_header.scss */
+p.main-title span {
+  font-weight: 400;
+}
+
+/* line 100, ../scss/layouts/_header.scss */
+p.main-title a {
+  color: #545151;
+}
+
+/* line 104, ../scss/layouts/_header.scss */
+.main-description h1 {
+  font-weight: 300;
+  color: #fff;
+  background-color: #ff1c25;
+  font-size: 12px;
+  padding: 8px 20px;
+  display: inline-block;
+  margin-top: 4px;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* line 117, ../scss/layouts/_header.scss */
+.advantage-item {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* line 123, ../scss/layouts/_header.scss */
+.advantage-item:hover .icon {
+  background-color: #2a3a59;
+}
+
+/* line 128, ../scss/layouts/_header.scss */
+.icon {
+  background-color: #ff1c25;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+}
+
+/* line 138, ../scss/layouts/_header.scss */
+.icon i {
+  font-size: 40px;
+  line-height: 1.9;
+}
+
+/* line 143, ../scss/layouts/_header.scss */
+p.advantage-title {
+  text-transform: uppercase;
+  margin: 20px 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* line 150, ../scss/layouts/_header.scss */
+p.advantage-description {
+  font-size: 14px;
+}
+
+/* WRAPPER */
+/* line 159, ../scss/layouts/_header.scss */
+.marginbottom {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #eee;
+}
+
+/* line 165, ../scss/layouts/_header.scss */
+.container {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+/* line 174, ../scss/layouts/_header.scss */
+.bg-wrapper {
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+/* line 179, ../scss/layouts/_header.scss */
+.main-image img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+/** HEADER **/
+/* line 188, ../scss/layouts/_header.scss */
+.modal-header {
+  background-color: #2a3a59;
+  color: #fff;
+}
+
+/* line 193, ../scss/layouts/_header.scss */
+.modal-header h4 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* line 198, ../scss/layouts/_header.scss */
+.header-nav {
+  margin-top: 40px;
+  float: right;
+}
+
+/* line 203, ../scss/layouts/_header.scss */
+.header-fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1111;
+  width: 100%;
+}
+
+/* line 212, ../scss/layouts/_header.scss */
+.header-fixed .service-list {
+  margin: 0;
+  border-radius: 0;
+}
+
+/* line 217, ../scss/layouts/_header.scss */
+p.mockphone {
+  opacity: 0;
+  height: 0px;
+  margin: 0;
+  position: relative;
+  bottom: 30px;
+}
+
+/* line 225, ../scss/layouts/_header.scss */
+.modal-info p {
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+/* line 230, ../scss/layouts/_header.scss */
+.form-control {
+  border-radius: 2px;
+}
+
+/* line 234, ../scss/layouts/_header.scss */
+.modal-footer {
+  border-top: 1px dashed #ddd;
+}
+
+/* line 238, ../scss/layouts/_header.scss */
+input.callback {
+  background-color: #ff1c25;
+  border-radius: 2px;
+  border: none;
+  padding: 6px 15px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* line 247, ../scss/layouts/_header.scss */
+input.callback:hover {
+  background-color: #2a3a59;
+}
+
+/* line 251, ../scss/layouts/_header.scss */
+.form-control {
+  font-size: 12px;
+}
+
+/* line 255, ../scss/layouts/_header.scss */
+.alert-custom {
+  background-color: #2a3a59;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 300;
+}
+
+/* line 264, ../scss/layouts/_header.scss */
+.help-block {
+  margin-top: 0;
+}
+
+/* line 268, ../scss/layouts/_header.scss */
+.text-danger li {
+  background-color: #2a3a59;
+  padding: 2px 10px;
+  font-size: 12px;
+  color: #fff;
+  list-style: none;
+}
+
+/* line 276, ../scss/layouts/_header.scss */
+.btn-ask {
+  border: 1px dashed #ff1c25;
+  color: #ff1c25;
+  background-color: #fff;
+  text-transform: uppercase;
+  border-radius: 4px;
+  line-height: 1.7;
+  margin-top: 3px;
+}
+
+/* line 286, ../scss/layouts/_header.scss */
+.btn-ask:hover {
+  border: 1px dashed #2a3a59;
+  text-decoration: none;
+  color: #2a3a59;
+}
+
+/* line 293, ../scss/layouts/_header.scss */
+.contacts {
+  text-align: right;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* line 299, ../scss/layouts/_header.scss */
+.contacts ul {
+  list-style: none;
+}
+
+/* line 303, ../scss/layouts/_header.scss */
+.contacts span {
+  color: #afaeae;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+/* line 310, ../scss/layouts/_header.scss */
+.social li {
+  display: inline-block;
+  float: right;
+  margin-left: 10px;
+}
+
+/* line 316, ../scss/layouts/_header.scss */
+.social img {
+  width: 20px;
+}
+
+/* line 320, ../scss/layouts/_header.scss */
+.social img:hover {
+  opacity: .7;
+}
+
+/** SERVICE LIST **/
+/* line 326, ../scss/layouts/_header.scss */
+.service-list {
+  background-color: #2a3a59;
+  text-align: center;
+  margin: 20px 0 0 0;
+  border-radius: 8px 8px 0 0;
+}
+
+/* line 333, ../scss/layouts/_header.scss */
+.service-list li {
+  border-right: 1px dashed #ff1c25;
+  list-style: none;
+}
+
+/* line 338, ../scss/layouts/_header.scss */
+li.last-item {
+  border-right: 0;
+  border-color: #fff;
+}
+
+/* line 344, ../scss/layouts/_header.scss */
+li.last-item {
+  border-right: 0;
+  border-color: #fff;
+}
+
+/* line 349, ../scss/layouts/_header.scss */
+.service-item a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: block;
+  padding: 12px;
+  line-height: 1;
+}
+
+/* line 361, ../scss/layouts/_header.scss */
+.service-list li.active a {
+  color: #c2ab82;
+}
+
+/* line 365, ../scss/layouts/_header.scss */
+.service-item i {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+
+/* line 371, ../scss/layouts/_header.scss */
+.service-item a:hover {
+  text-decoration: none;
+  color: #c2ab82;
+}
+
+/* line 1, ../scss/layouts/_footer.scss */
+footer {
+  background-color: #2a3a59;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 12px;
+}
+
+/** MAIN CONTENT **/
+/* line 3, ../scss/layouts/_mainpage.scss */
+p.main-content-title {
+  font-weight: 400;
+  font-size: 24px;
+  text-transform: uppercase;
+  border-bottom: 1px dashed #ff1c25;
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  margin-right: 20px;
+  color: #2a3a59;
+}
+
+/* line 16, ../scss/layouts/_mainpage.scss */
+.main-content {
+  margin-bottom: 30px;
+  margin-right: 20px;
+  margin-top: 4 0px;
+}
+
+/* line 22, ../scss/layouts/_mainpage.scss */
+.main-content p {
+  margin-bottom: 10px;
+}
+
+/* line 26, ../scss/layouts/_mainpage.scss */
+.main-content ol, ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+/* line 31, ../scss/layouts/_mainpage.scss */
+.main-content img {
+  width: 100%;
+}
+
+/* line 34, ../scss/layouts/_mainpage.scss */
+.main-content strong {
+  font-weight: bold;
+}
+
+/* line 38, ../scss/layouts/_mainpage.scss */
+.page-content ol, ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+/* line 43, ../scss/layouts/_mainpage.scss */
+.page-content img {
+  width: 100%;
+}
+
+/* line 46, ../scss/layouts/_mainpage.scss */
+.page-content strong {
+  font-weight: bold;
+}
+
+/* line 50, ../scss/layouts/_mainpage.scss */
+.advantages {
+  margin: 30px 0;
+}
+
+/* line 54, ../scss/layouts/_mainpage.scss */
+.advantage-i {
+  border: 1px dashed #ff1c25;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+}
+
+/* line 61, ../scss/layouts/_mainpage.scss */
+.advantage-i p {
+  height: 70px;
+}
+
+/* line 65, ../scss/layouts/_mainpage.scss */
+.icon-advantage {
+  margin-bottom: 10px;
+}
+
+/* line 69, ../scss/layouts/_mainpage.scss */
+.icon-advantage i {
+  color: #2a3a59;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+/* line 75, ../scss/layouts/_mainpage.scss */
+.icon-advantage span {
+  font-size: 20px;
+  position: relative;
+  bottom: 4px;
+}
+
+/* line 1, ../scss/layouts/_page.scss */
+.content {
+  font-size: 15px;
+  background-color: #DDD;
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* line 10, ../scss/layouts/_page.scss */
+.breadcrumb {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+
+/* line 17, ../scss/layouts/_page.scss */
+.breadcrumb a {
+  color: #2a3a59;
+}
+
+/* line 21, ../scss/layouts/_page.scss */
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* line 25, ../scss/layouts/_page.scss */
+.breadcrumb > .active {
+  color: #545151;
+}
+
+/* line 29, ../scss/layouts/_page.scss */
+input.search {
+  font-size: 18px;
+  height: auto;
+  padding: 10px 10px;
+  border-radius: 4px;
+  height: 48px;
+  border: 1px solid #2a3a59;
+}
+
+/* line 38, ../scss/layouts/_page.scss */
+button.btn-search {
+  background-color: #2a3a59;
+  color: #fff;
+  height: 48px;
+  width: 48px;
+  font-size: 22px;
+  line-height: 1;
+  position: relative;
+  right: 9px;
+  border-radius: 0 4px 4px 0;
+}
+
+/* line 50, ../scss/layouts/_page.scss */
+button.btn-search:hover {
+  color: #c2ab82;
+}
+
+/* line 54, ../scss/layouts/_page.scss */
+.form-control:focus {
+  border: 1px solid #2a3a59;
+  box-shadow: none;
+}
+
+/* line 59, ../scss/layouts/_page.scss */
+.page-content {
+  margin: 60px 0;
+}
+
+/* line 63, ../scss/layouts/_page.scss */
+p.theme-title {
+  margin: 10px 0;
+  text-transform: capitalize;
+  font-size: 17px;
+}
+
+/* line 69, ../scss/layouts/_page.scss */
+a.read-more {
+  border: 1px dashed #ff1c25;
+  color: #ff1c25;
+  background-color: #fff;
+  text-transform: uppercase;
+  border-radius: 4px;
+  line-height: 1.7;
+  margin-top: 3px;
+  padding: 4px 10px;
+  display: inline-block;
+}
+
+/* line 81, ../scss/layouts/_page.scss */
+.theme-item ul {
+  margin-bottom: 20px;
+  margin-left: 10px;
+  list-style: none;
+}
+
+/* line 87, ../scss/layouts/_page.scss */
+.theme-item li:before {
+  font-family: "FontAwesome";
+  content: "\f111";
+  font-size: 7px;
+  margin-right: 10px;
+  position: relative;
+  bottom: 2px;
+  color: #ff1c25;
+}
+
+/* line 97, ../scss/layouts/_page.scss */
+.theme-item ul li a {
+  color: #888888;
+  font-size: 13px;
+}
+
+/* line 102, ../scss/layouts/_page.scss */
+.theme-item ul li a:hover {
+  color: #545151;
+}
+
+/* line 106, ../scss/layouts/_page.scss */
+.title h1 {
+  font-size: 32px;
+}
+
+@media (max-width: 768px) {
+  /* line 3, ../scss/layouts/_other.scss */
+  p.main-title {
+    font-size: 32px;
+    margin: 1px 0 0 0;
+  }
+
+  /* line 8, ../scss/layouts/_other.scss */
+  .main-description {
+    display: none;
+  }
+
+  /* line 12, ../scss/layouts/_other.scss */
+  .header-nav {
+    text-align: center;
+    float: none;
+    margin-top: 10px;
+  }
+
+  /* line 18, ../scss/layouts/_other.scss */
+  .service-list li {
+    border-right: none;
+  }
+}
+@media (max-width: 992px) {
+  /* line 28, ../scss/layouts/_other.scss */
+  .icon {
+    background-color: #ff1c25;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+  }
+
+  /* line 38, ../scss/layouts/_other.scss */
+  .icon i {
+    font-size: 25px;
+    line-height: 2;
+  }
+
+  /* line 43, ../scss/layouts/_other.scss */
+  p.advantage-title {
+    text-transform: uppercase;
+    margin: 10px 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  /* line 50, ../scss/layouts/_other.scss */
+  p.advantage-description {
+    font-size: 12px;
+  }
+}
